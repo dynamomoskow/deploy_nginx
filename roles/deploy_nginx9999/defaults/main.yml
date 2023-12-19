@@ -1,0 +1,5 @@
+---
+# defaults file for deploy_nginx9999
+nginx_config_file: /etc/nginx/nginx.conf
+page_title: "Hello 8080proxy"
+welcome_message: "Dynamo champion!"
