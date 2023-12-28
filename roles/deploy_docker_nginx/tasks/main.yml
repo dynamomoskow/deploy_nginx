@@ -1,0 +1,10 @@
+---
+# tasks file for install_Docker
+  - name: Import install docker
+    import_tasks: install_docker.yml
+
+  - name: Copy nginx nginx
+    import_tasks: nginx_config.yml
+
+  - name: Create nginx container
+    import_tasks: nginx_container.yml

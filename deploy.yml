@@ -1,0 +1,9 @@
+- name: Update
+  hosts: all
+  become: yes
+
+  tasks:
+  
+    - name: Install docker and create two containers nginx
+      ansible.builtin.import_role:
+        name: 'deploy_docker_nginx'

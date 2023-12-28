@@ -1,0 +1,17 @@
+---
+  - name: Создание первого контейнера
+    docker_container:
+      name: nginx1
+      image: nginx:latest
+      ports:
+        - "8080:80"
+      volumes:
+        - /tmp/templates/nginx1.conf:/etc/nginx/nginx.conf
+
+  - name: Создание второго контейнера
+    docker_container:
+      name: nginx2
+      image: nginx:latest
+      volumes:
+        - /tmp/templates/nginx2.conf:/etc/nginx/nginx.conf
+        - /tmp/templates/index2.html:/var/www/html/index.html
